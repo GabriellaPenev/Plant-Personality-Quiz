@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Personality</title>
+
+    <!-- link to google font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Plant Personality</h1>
+
+    </header>
+
+    <main class="wrapper">
+        <div>
+            <h2>Which household plant are you? Take the quiz below to find out!</h2>
+        </div>
+        <section class="form">
+            <form>
+                <fieldset>
+                    <p>When do you have the most energy?</p>
+                    <div>
+                        <div>
+                            <input type="radio" id="cactus1" value="saguaro cactus" name="question1">
+                            <label for="cactus1">I come alive at night</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="monstera1" value="monstera deliciosa" name="question1">
+                            <label for="monstera1">I'm an early riser</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ivy1" value="english ivy" name="question1">
+                            <label for="ivy1">Never, I live in a constant state of zen</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <p>How much water do you consume on a daily basis?</p>
+                    <div>
+                        <div>
+                            <input type="radio" id="cactus2" value="saguaro cactus" name="question2">
+                            <label for="cactus2">My body doesn't require moisture</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="monstera2" value="monstera deliciosa" name="question2">
+                            <label for="monstera2">Tons and tons, I'm thirstyyy</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ivy2" value="english ivy" name="question2">
+                            <label for="ivy2">The average amount I guess?</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <p>You're at a house party, what do you do?</p>
+                    <div>
+                        <div>
+                            <input type="radio" id="cactus3" value="saguaro cactus" name="question3">
+                            <label for="cactus3">Hang out with a chosen few, silently judging the loudest person in the
+                                room.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="monstera3" value="monstera deliciosa" name="question3">
+                            <label for="monstera3">Turn this into a pool party!</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ivy3" value="english ivy" name="question3">
+                            <label for="ivy3">Get stoned and pass out on the sofa</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <p>Where do you want to travel to?</p>
+                    <div>
+                        <div>
+                            <input type="radio" id="cactus4" value="saguaro cactus" name="question4">
+                            <label for="cactus4">Somewhere hot, dry, and deserted</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="monstera4" value="monstera deliciosa" name="question4">
+                            <label for="monstera4">Somewhere tropical</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ivy4" value="english ivy" name="question4">
+                            <label for="ivy4">A quaint cottage in the English countryside</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="See My Results!">
+                </div>
+            </form>
+        </section>
+
+        <section class="results">
+            <h3 class="personality-heading">
+                Your plant personality is...
+            </h3>
+            <div class="results-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div>
+                <span class="juno-footer"><a href="https://junocollege.com/" target="_blank"
+                        rel="noopener noreferrer">Created at Juno College of
+                        Technology</a> by <a href="https://www.gabriellapenev.com/" target="_blank"
+                        rel="noopener noreferrer">Gabriella Penev</a> </span>
+            </div>
+        </section>
+    </footer>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
