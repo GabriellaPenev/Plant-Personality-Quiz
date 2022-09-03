@@ -10,9 +10,19 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 html {
     font-family: 'Questrial', sans-serif;
-    font-size: 62.5%;
+    font-size: 125%;
     color: #648b84;
     text-align: center;
+}
+
+h1, 
+h2, 
+h3, 
+p, 
+button, 
+input {
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
@@ -23,29 +33,29 @@ html {
 
 body {
     background-image: url("assets/background-image.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     font-family: 'Shrikhand', cursive;
     text-shadow: 3px 3px 4px #bfd0cc;
+    background-color: #ea8387;
+    border: 2px solid white;
+    border-radius: 60px 60px 20px 20px;
+    padding: 10px;
+    margin: 60px 0 30px;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     font-style: italic;
-    text-shadow: 3px 3px 4px #bfd0cc;
-}
-
-section {
-    font-size: 2.5rem;
-}
-
-section p {
-    font-size: 3rem;
+    border: 2px solid white;
+    background-color: #ea8387;
+    border-radius: 15px 15px 50px 50px;
+    padding: 10px;
 }
 
 input, 
@@ -59,84 +69,128 @@ fieldset {
     border: none;
     background: #dbe5e8;
     border-radius: 140px;
-    opacity: .92;
-    margin: 40px;
+    opacity: .98;
+    margin: 40px 0;
+    padding: 20px 25px;
+    transition: 0.7s ease-in all;
+}
+
+fieldset label {
+    font-size: clamp(0.8rem, 3vw, 1.4rem);
+}
+
+fieldset p {
+    font-size: clamp(0.9rem, 3vw, 1.6rem);
+    font-weight: bold;
+    text-shadow: 3px 3px 4px #fcf1ed;
+}
+
+input, 
+label {
+    transition: 0.3s ease-in-out all;
+}
+
+input {
+    accent-color: #648b84;
+}
+
+input:hover+label, 
+input:focus+label {
+    text-shadow: 3px 3px 4px #fcf1ed;
+}
+
+button {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+    color: #ea8387;
+    background-color: #bfd0cc;
+    border: none;
+    border-radius: 80px;
+    margin: 15px;
+    padding: 20px 5px;
+    transition: 0.7s;
+    width: 50%;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, 
+    transform 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background-color: #ea8387;
+    color: #648b84;
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 .results {
     display: none;
     border: none;
-    background: #dbe5e8;
+    background: #bfd0cc;
     border-radius: 140px;
     opacity: .96;
-    margin: 40px;
     padding: 10px;
 }
 
 .results-container h3 {
     font-family: 'Shrikhand', cursive;
     color: #056e64;
-    font-size: 6rem;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     text-shadow: 1px 1px 1px #dbe5e8;
-    transition-duration: 0.7s;
+    transition: 0.3s ease-in all;
 }
+
 .results-container h3:hover {
     color: #ea8387;
 }
 
-input[type=radio]:hover+label, 
-section p:hover, 
-input[type=radio]:focus+label,
-section p:focus {
-    text-shadow: 3px 3px 4px #fcf1ed;
-    font-weight: bold; 
-}
-input[name=question1],
-input[name=question2],
-input[name=question3],
-input[name=question4]
- {
-    accent-color: #648b84;
-}
-
-input[type=submit] {
-    border: 1px solid #fcf1ed;
-    border-radius: 80px;
-    background-color: #bfd0cc;
-    color: #fcf1ed;
-    margin: 15px;
-    transition: 0.7s;
-    width: 320px;
-    height: 60px;
-}
-
-input[type=submit]:hover,
-input[type=submit]:focus {
-    background-color: #648b84;
-}
-
-.footer {
-    margin: 30px 0 30px 0;
-}
-
-.juno-footer {
-    font-size: 1.6rem;
+footer {
     color: white;
+    font-size: 0.8rem;
     font-family: 'Questrial', sans-serif;
     font-weight: bold;
+    text-align: center;
+    transition-duration: 0.7s;
     margin: 20px;
+}
+
+footer p {
+    width: 41% auto;
+    background-color: #648b84;
     padding: 10px;
     border: none;
     border-radius: 80px;
-    background-color: #648b84;
-    transition-duration: 0.7s;
-}
-.juno-footer:hover,
-.juno-footer:focus {
-    background-color: #ea8387;
 }
 
-.juno-footer a {
+footer a {
     text-decoration: none;
     color: #fcf1ed;    
+}
+
+@media (max-width: 525px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    fieldset,
+    .results {
+        border-radius: 60px;
+        padding: 20px;
+    }
+
+    fieldset p {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px){
+    button{
+        width: 80%;
+    }
 }

@@ -37,7 +37,13 @@ $(document).ready(function () {
             let arr = Array.from(results);
 
             // if / else statement displaying both the 'tie' option where there are 2 plant values, as well as the 'winner' option with 1 plant value in results section:
-            if (arr.length > 1) {
+              // if array is less than 4 values long, ie an input field was skipped, then alert user to fill out all options to get result: 
+              if (plantArray.includes(undefined)) {
+                $(".results").css("display", "none");
+                resultsBox.remove()
+                alert('Please complete all 4 questions to see your results!');
+            }
+            else if (arr.length > 1) {
                 arr.forEach(item => {
                     const textH3 = document.createElement("h3");
                     textH3.innerText = item;
@@ -78,10 +84,6 @@ $(document).ready(function () {
 
             $(".results").css("display", "block");
 
-            // if array is less than 4 values long, ie an input field was skipped, then alert user to fill out all options to get result: 
-            if (plantArray.includes(undefined)) {
-                alert('Please complete all 4 questions in the quiz to see your results!');
-            };
         };
 
         // calling the function:

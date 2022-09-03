@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Personality</title>
 
-    <!-- link to google font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-32x32.png" sizes="32x32" />
@@ -19,16 +19,13 @@
 
 <body>
 
-    <header>
-        <h1>Plant Personality</h1>
-
+    <header class="wrapper">
+        <h1 class="animate__animated animate__slideInDown">Plant Personality</h1>
+        <h2 class="animate__animated animate__slideInUp">Which household plant are you? Take the quiz below to find out!</h2>
     </header>
 
-    <main class="wrapper">
-        <div>
-            <h2>Which household plant are you? Take the quiz below to find out!</h2>
-        </div>
-        <section class="form">
+    <main class="animate__animated animate__slideInUp">
+        <section class="form wrapper">
             <form>
                 <fieldset>
                     <p>When do you have the most energy?</p>
@@ -102,14 +99,11 @@
                         </div>
                     </div>
                 </fieldset>
-
-                <div>
-                    <input type="submit" value="See My Results!">
-                </div>
+                <button type="submit">See my results!</button>
             </form>
         </section>
 
-        <section class="results">
+        <section class="results wrapper">
             <h3 class="personality-heading">
                 Your plant personality is...
             </h3>
@@ -118,14 +112,13 @@
     </main>
 
     <footer>
-        <section class="footer">
-            <div>
-                <span class="juno-footer"><a href="https://junocollege.com/" target="_blank"
-                        rel="noopener noreferrer">Created at Juno College of
-                        Technology</a> by <a href="https://www.gabriellapenev.com/" target="_blank"
-                        rel="noopener noreferrer">Gabriella Penev</a> </span>
-            </div>
-        </section>
+        <div class="wrapper animate__animated animate__slideInUp">
+            <p>
+                <a href="https://junocollege.com/" target="_blank" rel="noopener noreferrer">Created at Juno College</a>
+                by
+                <a href="https://www.gabriellapenev.com/" target="_blank" rel="noopener noreferrer">Gabriella Penev</a>
+                </p>
+        </div>
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js'
